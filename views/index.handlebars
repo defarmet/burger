@@ -1,23 +1,26 @@
 <h1>Burgers</h1>
-
+<br>
 <h2>Current Menu</h2>
 
-<ul>
+<ul class="list-group">
 	{{#each burgers}}
 	{{#unless devoured}}
-		<li>
+		<li class="list-group-item">
 		{{burger_name}}
-		<button class="devour" data-id="{{this.id}}">Devour</button>
+		<br>
+		<button class="btn btn-info devour" data-id="{{this.id}}">
+			Devour
+		</button>
 		</li>
 	{{/unless}}
 	{{/each}}
 </ul>
-
+<br><br>
 <h2>Add a Burger</h2>
 <form id="create">
 	<div class="form-group">
 		<label for="burger">Burger Name:</label>
 		<input type="text" id="burger" name="name">
 	</div>
-	<button type="submit">Add Burger</button>
+	<button class="btn btn-primary" type="submit">Add Burger</button>
 </form>

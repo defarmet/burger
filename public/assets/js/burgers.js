@@ -23,6 +23,7 @@ $(function()
 		}).then(function()
 		{
 			console.log("Added new burger");
+			$("#burger").val("");
 			location.reload();
 		});
 	});
